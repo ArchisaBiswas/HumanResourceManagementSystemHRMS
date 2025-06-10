@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active"> Log in </h2>
+         
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+         
+          </div>
+      
+          <!-- Login Form -->
+          <form id="form" action = "password_verify.php" method = "POST">  
+            <input type="text" id="login" class="fadeIn second" name="user_id" placeholder="User ID">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+            <input type="submit" class="fadeIn fourth"  name="submit" value="Log In">
+          </form>
+      
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a class="underlineHover" href="Landing_Page/index.html">ZERO-E: AN HRMS</a>
+          </div>
+      
+        </div>
+      </div>
+
+      <script>
+        const userIdInput = document.getElementById('login');
+          userIdInput.addEventListener('input', () => {
+            const regex = /^\d+$/; // This regex allows only digits
+            if (!regex.test(userIdInput.value)) {
+              userIdInput.setCustomValidity('User ID must contain only digits');
+            } else {
+              userIdInput.setCustomValidity('');
+            }
+          });
+  
+          const passwordInput = document.getElementById('password');
+          passwordInput.addEventListener('input', () => {
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d!#$%&'*+=?^_{|}~@]{8,16}$/; // This regex requires at least one uppercase, one lowercase, and one digit, and allows between 8 and 16 characters.
+            if (!regex.test(passwordInput.value)) {
+              passwordInput.setCustomValidity('Password must have at least one uppercase letter, one lowercase letter, and be between 8 and 16 characters long');
+            } else {
+              passwordInput.setCustomValidity('');
+            }
+          });
+  
+          const form = document.getElementById('form');
+          form.addEventListener('submit', (event) => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+            }
+          });
+  
+      </script>
+
+</body>
+</html>

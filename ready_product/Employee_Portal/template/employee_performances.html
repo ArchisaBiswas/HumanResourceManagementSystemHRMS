@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Performance Ratings</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #export
+        {
+            background-color: #fed049;
+            right: 30em;
+            bottom: 3em;
+            height: 4em;
+            width: 6em;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+</br> </br>
+    <form id="form">
+        <label for="quarter">Enter the quarter number:</label>
+
+        <input id="quarter" type="text" placeholder="Quarter Number" name="quarter">
+
+        </br> </br> 
+        <label for="enter_performances">Rate the following employees performance:</label>
+
+        <table id="enter_performances" class="my-table">
+
+            <!-- <tr>
+                <th colspan="3">MY EMPLOYEES</th>
+            </tr> -->
+
+            <tr>
+                <th>Employee ID</th>
+                <th>Full Name</th>
+                <th>Performance Rating (0 - 10)</th>
+            </tr>    
+        
+        </table>
+
+        </br> 
+
+        <input id="submit" type="submit" value="Submit Ratings">
+
+    </form>
+
+    <input id="export" type="button" value="Export" onclick="exporting(event)">
+
+        <script>
+            function exporting(event)
+            {
+                event.preventDefault();
+                content = document.getElementById("enter_performances").innerHTML;
+                window.print(content);
+            }
+        </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="employee_performances.js"></script>
+
+</body>
+</html>

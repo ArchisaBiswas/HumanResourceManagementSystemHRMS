@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Scheduling</title>
+
+    <title>interview scheduling Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, textarea, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 38px;
+      color: #fff;
+      z-index: 2;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      form {
+      width: 80%;
+      padding: 20px;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 0 25px 0 #4CACBC; 
+      }
+      .banner {
+      position: relative;
+      height: 210px;
+      background-image: url("benches.jpg");  
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3); 
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      input[type="date"] {
+      padding: 4px 5px;
+      }
+      select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color: black;
+      }
+      .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 6px 0 aqua;
+      color: aqua;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color: #a9a9a9;
+      }
+      .item i {
+      right: 2%;
+      top: 30px;
+      z-index: 1;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 1%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      }
+      input[type=radio], input[type=checkbox]  {
+      display: none;
+      }
+      label.radio {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      }
+      input[type=radio]:checked + label:before, label.radio:hover:before {
+      border: 2px solid #4CACBC;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 8px;
+      height: 4px;
+      border: 3px solid #4CACBC;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      select, table {
+      width: 100%;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background: aqua;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #4CACBC;
+      }
+      th, td {
+      width: 18%;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .city-item input {
+      width: calc(50% - 20px);
+      }
+      .city-item select {
+      width: calc(50% - 8px);
+      }
+      #output{
+        padding: 20px;
+      }
+      }
+
+      th, td {
+      width: 18%;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+
+      select, table {
+      width: 100%;
+      }
+
+     
+        
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="testbox">
+      <form id="form">  
+        <div class="banner">
+          <h1>INTERVIEW SCHDULING FORM</h1>
+        </div>
+        <div class="item">
+            Job Role: <input placeholder = "Enter Job Role" type = "text" name="job_role"> 
+        </div>
+        <div class="item">
+            Job Description: <input placeholder = "Enter Job Description" type = "text" name="job_description">
+        
+        </div>
+        <div class="item">
+            Expertise: <input id = "expertise" placeholder = "Enter Expertise" type = "text" name = "expertise" >
+          
+         </div>
+        <div class="item">
+            Number of Interviewers: <input id = "num_interviewers" placeholder = "Enter Number of Interviewers required" type = "text" name = "num_interviewers" > 
+    Preferred Interviewing Experience (To filter, if adequate number of Interviewers with this Expertise are available):
+         
+        </div>
+
+            <input id = "interviewing_experience" placeholder = "Enter Preferred Interviewing Experience" type = "text" name = "interviewing_experience" >
+          <div class="question-answer">
+        </div>
+    
+        <div class="btn-block">
+          <button type="submit" input id="submit" value="submit">Send Application</button>
+        </div>
+      
+      
+      
+      <div id="output">
+      <label id="job_role" style="display: none;">Job Role: </label></br> </br> </br>
+      <label id="job_description" style="display: none;">Job Description: </label></br> </br> </br>
+ 
+      <label id="output_message"></label></br> </br> </br>
+ 
+      <table id="results" style="display: none;">
+ 
+             <tr>
+                 <th colspan="2">APPLICANTS</th>
+             </tr>
+     
+             <tr>
+                 <th>Name</th>
+                 <th>Email ID</th>
+             </tr>    
+         
+      </table>
+ 
+      <table id="interviewers" style="display: none;">
+ 
+             <tr>
+                 <th colspan="4">INTERVIEW PANEL MEMBERS</th>
+             </tr>
+     
+             <tr>
+                 <th>Name</th>
+                 <th>Email ID</th>
+                 <th>Qualifications</th>
+                 <th>Experience In Company</th>
+             </tr>    
+         
+      </table> 
+    </form>
+      </div>
+
+      </div>
+    
+
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="interview_scheduling.js"></script>
+  </body>
+
+
+
+
+ 

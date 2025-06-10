@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Entitlement</title>
+</head>
+<body>
+    
+    <input id="from_date" type="text" placeholder="From (MM/DD/YYYY)">
+    <input id="to_date" type="text" placeholder="To (MM/DD/YYYY)">
+
+    <input onclick="compute_number_of_days()" type="submit" value="Apply">
+
+    </br> </br> </br> 
+
+    <label id="confirmation" style="visibility: hidden;"></label>
+
+    <label id="number_of_days" style="visibility: hidden;" name="number_of_days"></label>
+
+    <label id="confirmation_second_half" style="visibility: hidden;"></label>
+
+    <input id="submit" onclick="fetchData()" style="visibility: hidden;" type="submit" value="Yes">
+
+    <input id="no" style="visibility: hidden;" type="submit" value="No">
+
+    </br> </br> </br> 
+    </br> </br> </br> 
+
+    <label id="result" style="visibility: hidden;"></label>
+    <input id="yes_take" onclick="updateLeavesTaken()" style="visibility: hidden;" type="submit" value="Yes">
+    <input id="no_take" style="visibility: hidden;" type="submit" value="No">
+
+    </br> </br> </br> 
+    </br> </br> </br> 
+
+    <label id="final_result" style="visibility: hidden;"></label>
+
+    <script src="leave_entitlement.js"></script>
+
+</body>
+</html>

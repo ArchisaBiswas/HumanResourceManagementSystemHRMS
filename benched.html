@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benched</title>
+</head>
+<body>
+
+    <form id="form">
+
+        <input type="text" placeholder="skills" name="skills"></br> </br> </br>
+        <input type="text" placeholder="experience" name="experience"></br> </br> </br>
+        <input type="text" placeholder="qualifications" name="qualifications"></br> </br> </br>
+        <input id="offering" type="text" placeholder="offering_salary" style="visibility: visible;" name="offering_salary"></br> </br> </br>
+        <input onclick="pick_range()" type="button" value="Pick a Range"></br> </br> </br>
+        <input id="pick1" type="text" placeholder="From" style="visibility: hidden;" name="from"></br> </br> </br>
+        <input id="pick2" type="text" placeholder="To" style="visibility: hidden;" name="to"></br> </br> </br>
+        <input onclick="back_range()" type="button" value="Enter single value"></br> </br> </br>
+        <input id="submit" type="button" value="Search"></br> </br> </br>
+
+    </form>
+
+    <label id="output_message"></label></br> </br> </br>
+    
+    <table id="results" style="display: none;">
+
+        <tr>
+            <th colspan="3">PROSPECTIVE EMPLOYEES</th>
+        </tr>
+
+        </br>
+
+        <tr>
+            <th>Name</th>
+            <th>Email ID</th>
+            <th>Phone Number</th>
+        </tr>    
+    
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="benched.js"></script>
+</body>
+</html>

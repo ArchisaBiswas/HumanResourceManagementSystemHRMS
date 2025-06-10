@@ -1,0 +1,64 @@
+<!--
+    Team Number: 11
+
+    Team Members: Anshaj Ahuja (2141109)
+                  Archisa Biswas (2141145)
+                  Umaima Parveen Kakamari (2141162)
+
+    Web Technology Program: 6
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        
+        <h2 class="inactive underlineHover">Register</h2>
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+       
+        </div>
+          
+        <form action = "password_hash.php" method = "POST">  
+          <input type="text" id="login" class="fadeIn first" name="username" placeholder="Enter username">
+          <input type="text" class="fname" class="fadeIn first" name="fname" placeholder="Enter firstname">
+          <input type="text" id="lname" class="fadeIn first" name="lname" placeholder="Enter lastname">
+          <input type="text" id="email" class="fadeIn first" name="email" placeholder="Enter email">
+          <input type="text" id="phno" class="fadeIn first" name="phno" placeholder="Enter phone no">
+          <input type="text" id="homeno" class="fadeIn first" name="homeno" placeholder="Enter home number">
+          <input type="text" id="start_date" class="fadeIn first" name="startdate" placeholder="Enter start date-dd/mm/yy">
+          <input type="text" id="exp" class="fadeIn first" name="experience" placeholder="Enter experience in company">
+          <input type="text" id="dob" class="fadeIn first" name="dob" placeholder="Enter date of birth-dd/mm/yyyy">
+          <input type="text" id="building_name" class="fadeIn first" name="building_name" placeholder="Enter building name">
+          <input type="text" id="city" class="fadeIn first" name="city" placeholder="Enter city">
+          <input type="text" id="country" class="fadeIn first" name="country" placeholder="Enter country">
+          <input type="text" id="zip_code" class="fadeIn first" name="zip" placeholder="Enter zip code">
+          <input type="text" id="gender" class="fadeIn first" name="gender" placeholder="Enter gender-M/F">
+          <input type="text" id="password" class="fadeIn first" name="password_proposed" placeholder="Enter password">
+          <input type="text" id="password2" placeholder="Re-enter and Confirm Password" name="password"><br/><br/>
+          <input type="submit" id="submit" class="fadeIn fourth" onclick="return validate()" name="submit" value="Log In">
+        </form>
+
+        <label style="visibility: visible;"></label>
+
+       </div>
+       </div>
+
+       <script src="register.js" type="text/javascript"></script>
+
+</body>
+</html>
+

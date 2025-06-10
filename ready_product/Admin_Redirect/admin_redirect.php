@@ -1,0 +1,107 @@
+<?php 
+//session_start();
+//include '../check_activity.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Admin</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+         
+         #icon{
+            width: 50%;
+         }
+
+
+
+
+      </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+ 
+      <!-- end guarantee -->
+      <!-- order -->
+      <div class="order">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8 offset-md-2">
+                  <div class="titlepage text_align_center">
+                     <?php
+                        session_start();
+                        echo "<h2>HELLO, <br> <span class='blue_light'>ADMIN ".$_SESSION['username']."</span></h2>";
+                     ?>
+                     <p>What would you like today?</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4">
+                  <div id="ho_co" class="order-box_main">
+                     <div class="order-box text_align_center">
+                        <img id="icon" src="portal.png" alt="">
+                        <h3>Employee Portal</h3>
+                       
+                     </div>
+                     <a class="read_more" type="button" name="employee_portal" value="Employee Portal" onclick="ep_redirect()">GO</a>
+                     
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div id="ho_co" class="order-box_main">
+                     <div class="order-box text_align_center">
+                        <img id="icon" src="schedule.png" alt="">
+                        <h3>Interview Scheduling</h3>
+                     </div>
+                     <a class="read_more" type="button" name="interview_scheduling" value="Interview Scheduling" onclick="is_redirect()">GO</a>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div id="ho_co" class="order-box_main">
+                     <div class="order-box text_align_center">
+                        <img  id="icon" src="bench.png" alt="">
+                        <h3>Benching</h3>
+                     </div>
+                     <a class="read_more" type="button"  name="benched" value="Benching" onclick="b_redirect()">GO</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end order -->
+      <!-- about -->
+     
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="admin_redirect.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/custom.js"></script>
+   </body>
+</html>

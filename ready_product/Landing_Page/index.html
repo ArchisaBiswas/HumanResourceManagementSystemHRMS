@@ -1,0 +1,521 @@
+<!--
+Team Number: 11
+
+Team Members: Anshaj Ahuja (2141109)
+              Archisa Biswas (2141145)
+              Umaima Parveen Kakamari (2141162)
+
+Web Technology Program: 3 -->
+
+
+<!-- Landing Page: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Zero-E</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+      <!-- Internal Style: -->
+
+      <style>
+         
+         .logo a 
+         {
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            line-height: 40px;
+         }
+
+      </style>
+
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img id ="mainimg" src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+
+         <!-- Inline Style: -->
+
+         <div class="header" style="width: 100%; padding: 20px 30px; border-bottom: #FED049 solid 20px; background-color: #4CACBC;">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img id="logo" src="images/logo.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="index.html"> Home  </a>
+                              </li>
+                              <!-- <li class="nav-item">
+                                 <a class="nav-link" href="about.html">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="furnitures.html">Furnitures</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="testimonial.html">Testimonial</a>
+                              </li>
+                              <li class="nav-item"> 
+                                 <a class="nav-link" href="contact.html">Contact Us</a>
+                              </li>-->
+                              <li class="nav-item d_none">
+                                 <a class="nav-link" href="#" onclick="redirect()"><i class="fa fa-user-circle padd_right" aria-hidden="true"></i>Login</a>
+                              </li>
+                              <!-- <li class="nav-item d_none">
+                                 <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                              </li>-->
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- banner -->
+      <section class="banner_main">
+         <div id="banner1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#banner1" data-slide-to="0" class="active"></li>
+               <li data-target="#banner1" data-slide-to="1"></li>
+               <li data-target="#banner1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container-fluid">
+                     <div class="carousel-caption">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="text-bg">
+                                 <h1>ZERO-E</h1>
+                                 <span>HUMAN RESOURCE MANAGEMENT</span>
+                                 <p>Are you lacking 100% comfort? Because we bring you <i><b>zero e</b>ffort</i>. </p>
+                                 <a href="#">More Info </a> <a href="#">Contact Us</a>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="text_img">
+                                 <figure><img src="images/car.png" alt="#"/></figure>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- <div class="carousel-item">
+                  <div class="container-fluid">
+                     <div class="carousel-caption">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="text-bg">
+                                 <h1>Welcome</h1>
+                                 <span>car repair services</span>
+                                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
+                                 <a href="#">More Info </a> <a href="#">Contact Us</a>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="text_img">
+                                 <figure><img src="images/car.png" alt="#"/></figure>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div> -->
+               <!-- <div class="carousel-item">
+                  <div class="container-fluid">
+                     <div class="carousel-caption">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="text-bg">
+                                 <h1>Welcome</h1>
+                                 <span>Our services</span>
+                                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
+                                 <a href="#">More Info </a> <a href="#">Contact Us</a>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="text_img">
+                                 <figure><img src="images/car.png" alt="#"/></figure>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+            <!-- <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </a>
+            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </a> -->
+         </div>
+      </section>
+      <!-- end banner -->
+      <!-- three_box -->
+      <div class="three_box">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="box_text">
+                     <h3>Experienced Users</h3>
+                     <i><img src="images/thr.png" alt="#"/></i>
+                     <p>HR Admin, Accounts Admin, Employee Training and Benefits Admin
+                        Have an expertise in managing the database</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box_text">
+                     <h3>Sophisticated Users</h3>
+                     <i><img src="images/thr1.png" alt="#"/></i>
+                     <p>Are well-versed in interacting with the databas</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box_text">
+                     <h3>Parametric Users</h3>
+                     <i><img src="images/thr2.png" alt="#"/></i>
+                     <p>Employees, Mentors and Interns
+                        Are least experienced in interacting with the database</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- three_box -->
+      <!-- about -->
+      <div  class="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>About Our Service </h2>
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                     <div class="about_img">
+                        <div class="about_box">
+                           <!-- <h3>Dolor sit amet, consectetur adipiscing elit,  </h3> -->
+                           <p>The purpose of the Human Resource Management System (HRMS) is to co-ordinate and manage all Human Resource functionalities and procedures throughout the employee life-cycle. The various business goals of the company can be achieved at a much higher rate and via smooth processing of multiple business processes through this HRMS. A company will be armed with a strong tool at their disposal to accurately manage and accomplish their objectives and dreams. With an enhanced experience for varied users of the company, not only will the HR processes be made easy but will also allow employees to share their experiences at their jobs as well as allow other companies to procure qualified individuals, if consented by the company using the HRMS.</p>
+                           <a class="read_more">Read More</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+      <!-- wedo  section -->
+      <div class="wedo ">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Our Services</h2>
+                     <p>Putting in the effort for you</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-10 offset-md-1">
+                  <div class="row">
+                     <div class="col-md-6 margin_bottom">
+                        <div class="work">
+                           <figure><img id="service" src="images/img1.png" alt="#" /></figure>
+                        </div>
+                        <div class="work_text">
+                           <h3>HR ADMIN<br><span class="blu">Recruitment and Hiring System,Benching System,Employee Connect</span></h3>
+                        </div>
+                     </div>
+                     <div class="col-md-6 margin_bottom">
+                        <div class="work">
+                           <figure><img src="images/img2.png.jpg" alt="#" /></figure>
+                        </div>
+                        <div class="work_text">
+                           <h3><br>ACCOUNTS ADMIN<br><span class="blu">Pay-Roll System,Recruitment and Resignation System, Leave Entitlement System</span></h3>
+                        </div>
+                     </div>
+                     <div class="col-md-6 margin_bottom">
+                        <div class="work">
+                           <figure><img src="images/img3.JPG" alt="#" /></figure>
+                        </div>
+                        <div class="work_text">
+                           <h3>EMPLOYEE TRAINING AND BENEFITS<br> <span class="blu">Employee Training System, Incentive System</span></h3>
+                        </div>
+                     </div>
+                     <div class="col-md-6 margin_bottom">
+                        <div class="work">
+                           <figure><img src="images/img4.jpg" alt="#" /></figure>
+                        </div>
+                        <div class="work_text">
+                           <h3>MANAGERS<br><span class="blu">Performance Evaluation</span></h3>
+                        </div>
+                     </div>
+                     <div class="col-md-6 margin_bottom">
+                        <div class="work">
+                           <figure><img src="images/img5.jpg" alt="#" /></figure>
+                        </div>
+                        <div class="work_text">
+                           <h3>EMPLOYEES<br><span class="blu">Employee Portal</span></h3>
+                        </div>
+                     </div>
+                     <div class="col-md-6 margin_bottom">
+                        <div class="work">
+                           <figure><img src="images/img6.jpg" alt="#" /></figure>
+                        </div>
+                        <div class="work_text">
+                           <h3>INTERNS AND MENTORS<br><span class="blu">Mentor-Intern System</span></h3>
+                        </div>
+                     </div>
+                  </div>
+                  <a class="read_more" href="#">See More</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end wedo  section -->
+      <!-- testimonial -->
+      <div class="testimonial">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Thank You So Much</h2>
+                     <!-- <p>This is the landing page for our website </p> -->
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div id="myCarousel" class="carousel slide testimonial_Carousel " data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="container">
+                              <div class="carousel-caption ">
+                                 <div class="row">
+                                    <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <i><img id="profile" src="images/tes.png" alt="#"/></i> 
+                                          <h4>ANSHAJ AHUJA</h4>
+                                          <span>2141109</span>
+                                          <p>Born in Rajasthan , likes to play basket ball ,i love coffee </p>
+                                       </div>
+                                    <!-- </div> 
+                                    <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <i><img src="images/tes1.jpg" alt="#"/></i>
+                                          <h4>ROCOYO</h4>
+                                          <span>(It is a long )</span>
+                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                                       </div> -->
+                                    </div> 
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <i><img id="profile" src="images/tes1.png" alt="#"/></i>
+                                          <h4>ARCHISA BISWAS</h4>
+                                          <span>2141145</span>
+                                          <p>Born in Bengaluru, likes to organise , i love to eat pizza</p>
+                                       </div>
+                                    </div>
+                                    <!-- <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <i><img src="images/tes1.jpg" alt="#"/></i>
+                                          <h4>ROCOYO</h4>
+                                          <span>(It is a long )</span>
+                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                                       </div>
+                                    </div> -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <i><img id="profile" src="images/tes2.jpg" alt="#"/></i>
+                                          <h4>UMAIMA P. K.</h4>
+                                          <span>2141162</span>
+                                          <p>Born in Hubli,likes to sleep, i love chicken popcorn fries </p>
+                                       </div>
+                                    </div> 
+                                    <!-- <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <i><img src="images/tes1.jpg" alt="#"/></i>
+                                          <h4>ROCOYO</h4>
+                                          <span>(It is a long )</span>
+                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                                       </div>
+                                    </div> -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                     </a> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end testimonial -->
+      </div>
+      <!--  footer -->
+      <footer id="contact">
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="titlepage">
+                        <h2>Contact Us</h2>
+                     </div>
+                  </div>
+                  <div class="col-md-8">
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Locations</li>
+                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a> +91 9087938492</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>zero.hrms@bca.christuniversity.in</li>
+                     </ul>
+                  </div>
+                  <div class="col-md-6">
+                     <form id="request" class="main_form">
+                        <div class="row">
+                           <div class="col-md-12 ">
+                              <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                           </div>
+                           <div class="col-md-12">
+                              <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
+                           </div>
+                           <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                              <button class="send_btn">Send</button>
+                           </div>
+                           <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                              <ul class="social_icon">
+                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="map">
+                        <figure><img src="images/map.jpg" alt="#"/></figure>
+                     </div>
+                     <!-- <form class="bottom_form">
+                        <h3>Newsletter</h3>
+                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                        <button class="sub_btn">subscribe</button>
+                     </form> -->
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <!-- <p>Copyright 2019 All Right Reserved By <a href="https://html.design/"> Free  html Templates</a></p> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+
+      <script src="login_redirect.js"></script>
+   </body>
+</html>

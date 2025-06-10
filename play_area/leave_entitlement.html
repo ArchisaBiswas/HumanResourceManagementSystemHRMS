@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Entitlement</title>
+    <style>
+        html, body {
+        min-height: 100%;
+        }
+        body, div, form, input, select, textarea, p { 
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+        line-height: 22px;
+        }
+        h1 {
+        position: absolute;
+        margin: 0;
+        font-size: 38px;
+        color: #fff;
+        z-index: 2;
+        }
+        .testbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        padding: 20px;
+        }
+        form {
+        width: 80%;
+        padding: 20px;
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 0 25px 0 #4CACBC; 
+        }
+        .banner {
+        position: relative;
+        height: 210px;
+        /*background-image: url("benches.jpg");  */
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        }
+        .banner::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.3); 
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        }
+        input, select, textarea {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        }
+        input {
+        width: calc(100% - 10px);
+        padding: 5px;
+        }
+      
+        select {
+        width: 100%;
+        padding: 7px 0;
+        background: transparent;
+        }
+        textarea {
+        width: calc(100% - 12px);
+        padding: 5px;
+        }
+        .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+        color: black;
+        }
+        .item input:hover, .item select:hover, .item textarea:hover {
+        border: 1px solid transparent;
+        box-shadow: 0 0 6px 0 aqua;
+        color: aqua;
+        }
+        .item {
+        position: relative;
+        margin: 10px 0;
+        }
+        
+      
+        .item i {
+        right: 2%;
+        top: 30px;
+        z-index: 1;
+        }
+      
+        input[type=radio], input[type=checkbox]  {
+        display: none;
+        }
+        label.radio {
+        position: relative;
+        display: inline-block;
+        margin: 5px 20px 15px 0;
+        cursor: pointer;
+        }
+        .question span {
+        margin-left: 30px;
+        }
+        label.radio:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        border: 2px solid #ccc;
+        }
+        input[type=radio]:checked + label:before, label.radio:hover:before {
+        border: 2px solid #4CACBC;
+        }
+        label.radio:after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        width: 8px;
+        height: 4px;
+        border: 3px solid #4CACBC;
+        border-top: none;
+        border-right: none;
+        transform: rotate(-45deg);
+        opacity: 0;
+        }
+        input[type=radio]:checked + label:after {
+        opacity: 1;
+        }
+        .btn-block {
+        margin-top: 10px;
+        text-align: center;
+        }
+        
+        button {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px; 
+        background: aqua;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        }
+        button:hover {
+        background: #4CACBC;
+        }
+        @media (min-width: 568px) {
+        .name-item, .city-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+        .name-item input, .city-item input {
+        width: calc(50% - 20px);
+        }
+        .city-item select {
+        width: calc(50% - 8px);
+        }
+        #output{
+          padding: 20px;
+        }
+        }
+      </style>
+</head>
+<body>
+    <div class="testbox">
+        <form id="form">  
+            <div class="banner">
+                <h1>LEAVE ENTITLEMENT SYSTEM</h1>
+              </div>
+    
+    <input id="from_date" type="date" placeholder="From (MM/DD/YYYY)">
+    <input id="to_date" type="date" placeholder="To (MM/DD/YYYY)">
+
+    <input type="submit" value="Apply" id="apply">
+
+    </br> </br> </br> 
+
+    <label id="confirmation" style="visibility: hidden;"></label>
+
+    <label id="number_of_days" style="visibility: hidden;" name="number_of_days"></label>
+
+    <label id="confirmation_second_half" style="visibility: hidden;"></label>
+
+    <input id="submit" style="visibility: hidden;" type="submit" value="Yes">
+
+    <input id="no" style="visibility: hidden;" type="submit" value="No">
+
+    </br> </br> </br> 
+    </br> </br> </br> 
+
+    <label id="result" style="visibility: hidden;"></label>
+    <input id="yes_take" style="visibility: hidden;" type="submit" value="Yes">
+    <input id="no_take" style="visibility: hidden;" type="submit" value="No">
+
+    </br> </br> </br> 
+    </br> </br> </br> 
+
+    <label id="final_result" style="visibility: hidden;"></label>
+    </form>
+    </div>
+
+    <script src="leave_entitlement.js"></script>
+
+</body>
+</html>
